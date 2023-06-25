@@ -17,9 +17,10 @@ public class Pro03 {
         };
         for (int i = 0; i < a.length; i++) {  //访问每一行
             /*j<a.length-i实现了i=0时访问10个元素，i=1时访问9个元素，
-            i=2时访问8个元素，i=3时访问7个元素，i=4时访问6个元素，i=5时访问5个元素，
-            i=6时访问4个元素，i=7时访问3个元素，i=8时访问2个元素，i=9时仅访问1个元素*/
-            for (int j = 0; j < a.length-i; j++) {
+             * i=2时访问8个元素，i=3时访问7个元素，i=4时访问6个元素，i=5时访问5个元素，
+             * i=6时访问4个元素，i=7时访问3个元素，i=8时访问2个元素，i=9时仅访问1个元素
+             * */
+            for (int j = 0; j < a.length - i; j++) {
                 int temp = a[i][j];  //暂存第i行第j列的元素
                 a[i][j] = a[a.length - 1 - j][a.length - 1 - i];  //将第i行第j列的元素替换为第a.length-1-j行第a.length-1-i列的元素
                 a[a.length - 1 - j][a.length - 1 - i] = temp;  //如果将a.length换成3将不具有通用性
